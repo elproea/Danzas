@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es"> <!-- Mejor en español si el contenido es en español -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danzas de la Costa Peruana</title>
+    <link rel="stylesheet" href="costa.css"> <!-- Conexión al archivo CSS externo -->
+</head>
+<body>
+
+    <!-- Encabezado principal -->
+    <header>
+
+        <h1>Danzas Típicas de la Costa Peruana</h1>
+          <p>Las danzas típicas de la costa peruana, como la Marinera, el Tondero, el Festejo, el Alcatraz y el Lando, se caracterizan por su estilo vivaz, el baile en parejas y la mezcla de influencias indígenas, africanas y españolas. Cada danza tiene movimientos, vestuarios y ritmos únicos, que reflejan la diversidad cultural de la región.                                   </p>
+           <ul>
+       
+
+
+
+
+
+           </ul>
+
+
+
+    </header>
+
+    <!-- Sección del slideshow -->
+    <div class="slideshow">
+        <img id="imagen" src="" alt="Danza típica de la costa peruana">
+    </div>
+
+    <!-- Script de JavaScript para el slideshow automático -->
+    <script>
+        const imagenes = [
+            "costa/danza1.jpg",
+            "costa/danza2.jpg",
+            "costa/danza3.jpg",
+            "costa/danza4.jpg",
+            "costa/danza5.jpg",
+            "costa/danza6.jpg",
+            "costa/danza7.jpg",
+            "costa/danza8.jpg",
+            "costa/danza9.jpg",
+            "costa/danza10.jpg"
+        ];
+
+        let indice = 0;
+        const img = document.getElementById("imagen");
+
+        function mostrarSiguienteFoto() {
+            img.style.opacity = 0;
+
+            setTimeout(() => {
+                img.src = imagenes[indice];
+                img.style.opacity = 1;
+                indice = (indice + 1) % imagenes.length;
+            }, 500);
+        }
+
+        mostrarSiguienteFoto(); // Mostrar la primera imagen
+        setInterval(mostrarSiguienteFoto, 3000); // Cambiar cada 3 segundos
+    </script>
+
+<div>
+    <footer>
+   <p>
+        Las danzas peruanas de la costa son un reflejo de la rica herencia cultural del Perú
+
+   </p>
+
+    </footer>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

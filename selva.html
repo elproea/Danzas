@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danzas de la Selva Peruana</title>
+    <link rel="stylesheet" href="selva.css">
+</head>
+<body>
+
+    <header>
+        <h1>Danzas Típicas de la Selva Peruana</h1>
+        <p>
+            Las danzas de la selva peruana están ligadas a la naturaleza, la espiritualidad y la vida comunitaria. 
+            Destacan la Pandilla Amazónica, el Anaconda, el Chimaychi, la Danza de la Anaconda y la Ayahuasca. 
+            Se caracterizan por su energía, el uso de tambores, flautas y vestimentas inspiradas en la flora y fauna amazónica.
+        </p>
+    </header>
+
+    <div class="slideshow">
+        <img id="imagen-selva" src="" alt="Danza típica de la selva peruana">
+    </div>
+
+    <script>
+        const imagenesSelva = [
+            "selva/danza1.jpg",
+            "selva/danza2.jpg",
+            "selva/danza3.jpg",
+            "selva/danza4.jpg",
+            "selva/danza5.jpg",
+            "selva/danza6.jpg",
+            "selva/danza7.jpg",
+            "selva/danza8.jpg",
+            "selva/danza9.jpg",
+            "selva/danza10.jpg"
+        ];
+
+        let indiceSelva = 0;
+        const imgSelva = document.getElementById("imagen-selva");
+
+        function mostrarSiguienteSelva() {
+            imgSelva.style.opacity = 0;
+
+            setTimeout(() => {
+                imgSelva.src = imagenesSelva[indiceSelva];
+                imgSelva.style.opacity = 1;
+                indiceSelva = (indiceSelva + 1) % imagenesSelva.length;
+            }, 500);
+        }
+
+        mostrarSiguienteSelva();
+        setInterval(mostrarSiguienteSelva, 3000);
+    </script>
+
+    <footer>
+        <p>Las danzas de la selva son una celebración de la naturaleza y la energía amazónica.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,216 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Estilo del body */
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Encabezado */
+header {
+  background: linear-gradient(90deg, #d90429, #ef233c, #ffb703);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* Menú de navegación */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a,
+nav ul li {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  transition: background 0.3s ease, color 0.3s ease;
+  border-radius: 5px;
+}
+
+nav ul li:hover {
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+/* Submenú */
+nav ul li ul {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  background: #ef233c;
+  list-style: none;
+  padding: 10px 0;
+  display: none;
+  min-width: 220px;
+  border-radius: 5px;
+}
+
+nav ul li:hover ul {
+  display: block;
+}
+
+nav ul li ul li {
+  padding: 8px 15px;
+}
+
+nav ul li ul li:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Main */
+main {
+  padding: 30px;
+  max-width: 900px;
+  margin: auto;
+}
+
+main h2, main h3 {
+  color: #d90429;
+  margin-bottom: 10px;
+}
+
+main p {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+main ul {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+main li {
+  margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+  background: #14213d;
+  color: #ffb703;
+  text-align: center;
+  padding: 15px 10px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
+
+/* --- Estilos para la sección Contacto --- */
+.contact-section {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.contact-section h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+  color: #d90429;
+}
+
+.contact-form {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.contact-form .row {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+  outline: none;
+  border-color: #ffb703;
+  box-shadow: 0 0 5px rgba(255,183,3,0.4);
+}
+
+.contact-form .consent {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-form .actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.contact-form button {
+  background: #d90429;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.contact-form button:hover {
+  background: #ef233c;
+}
+
+.contact-form button.secondary {
+  background: #eee;
+  color: #333;
+  border: 1px solid #ccc;
+}
+
+.form-msg {
+  margin-top: 10px;
+  font-size: 0.95rem;
+}
+main img {
+  display: block;              /* Centra la imagen */
+  margin: 20px auto;           /* Espaciado arriba/abajo y centrado */
+  max-width: 100%;             /* Se adapta al ancho de la pantalla */
+  height: auto;                /* Mantiene proporciones */
+  border-radius: 12px;         /* Bordes redondeados */
+  border: 3px solid #ffb703;   /* Borde dorado elegante */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* Sombras suaves */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+main img:hover {
+  transform: scale(1.03);      /* Efecto zoom suave */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+}

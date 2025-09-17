@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danzas de la Sierra Peruana</title>
+    <link rel="stylesheet" href="sierra.css">
+</head>
+<body>
+
+    <header>
+        <h1>Danzas Típicas de la Sierra Peruana</h1>
+        <p>
+            Las danzas de la sierra peruana reflejan la conexión con la tierra, las tradiciones agrícolas y la cosmovisión andina. 
+            Entre las más representativas se encuentran el Huaylas, la Diablada, el Carnaval Ayacuchano, el Huayno y la Chonguinada. 
+            Sus vestuarios coloridos y ritmos festivos expresan la identidad cultural de los pueblos andinos.
+        </p>
+    </header>
+
+    <div class="slideshow">
+        <img id="imagen-sierra" src="" alt="Danza típica de la sierra peruana">
+    </div>
+
+    <script>
+        const imagenesSierra = [
+            "sierra/danza1.jpg",
+            "sierra/danza2.jpg",
+            "sierra/danza3.jpg",
+            "sierra/danza4.jpg",
+            "sierra/danza5.jpg",
+            "sierra/danza6.jpg",
+            "sierra/danza7.jpg",
+            "sierra/danza8.jpg",
+            "sierra/danza9.jpg",
+            "sierra/danza10.jpg"
+        ];
+
+        let indiceSierra = 0;
+        const imgSierra = document.getElementById("imagen-sierra");
+
+        function mostrarSiguienteSierra() {
+            imgSierra.style.opacity = 0;
+
+            setTimeout(() => {
+                imgSierra.src = imagenesSierra[indiceSierra];
+                imgSierra.style.opacity = 1;
+                indiceSierra = (indiceSierra + 1) % imagenesSierra.length;
+            }, 500);
+        }
+
+        mostrarSiguienteSierra();
+        setInterval(mostrarSiguienteSierra, 3000);
+    </script>
+
+    <footer>
+        <p>Las danzas de la sierra transmiten tradición, espiritualidad y orgullo andino.</p>
+    </footer>
+</body>
+</html>

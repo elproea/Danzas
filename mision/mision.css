@@ -1,0 +1,78 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body */
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Encabezado */
+header {
+  background: linear-gradient(90deg, #a4161a, #ba181b, #e5383b);
+  color: #fff;
+  padding: 30px 20px;
+  text-align: center;
+  border-bottom: 4px solid #ffb703;
+}
+
+header h1 {
+  font-size: 2.3rem;
+  margin-bottom: 15px;
+}
+
+/* Contenedor principal */
+.padre {
+  max-width: 900px;
+  margin: 20px auto;
+  background: #fff;
+  color: #333;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.padre p {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.padre li {
+  margin-bottom: 15px;
+  font-weight: 500;
+  list-style: none;
+}
+
+/* Imagen */
+.padre img {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  border-radius: 12px;
+  border: 3px solid #ffb703;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.padre img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+}
+
+/* Footer (opcional si lo agregas en misión/visión) */
+footer {
+  background: #161a1d;
+  color: #fff;
+  text-align: center;
+  padding: 15px 10px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
